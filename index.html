@@ -1,84 +1,106 @@
-<!DOCTYPE html> 
+﻿<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="vierport" content="width=device-width, initial- scale=1.0">
-    <meta name="description" content="Projeto Portifólio">
-    <meta name="author" content="Geration Brasil">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto Portfólio">
+    <meta name="author" content="Generation Brasil">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <link rel="icon" href="./assets/img/favicon.svg" />
     <title>Universe</title>
 </head>
-<body>
 
+<body>
+ 
     <header>
 
+  
         <div id="header_content">
 
+            
             <div id="titulo">
+
+                <!-- Hyperlink -->
                 <a href="#">Universe</a>
+
             </div>
 
+        
             <div id="menu">
 
+                
                 <nav>
-                    
-                    <ol>
-                        <li><a href="#">home</a></li>
+                  
+                    <ul>
+                        <li><a href="#">Home</a></li>
                         <li><a href="#about">Sobre</a></li>
                         <li><a href="#contact">Contate-me</a></li>
-                    </ol>
+                    </ul>
                 </nav>
+
             </div>
-
-
         </div>
+
     </header>
 
     <main>
+
         <section id="home">
+
+       
             <article id="home_texto">
-                <h4>Bem vindo ao novo universo</h4>
+
+                <h4>Bem-vindo ao Novo Universo</h4>
                 <h1>Mundos diferentes para pessoas diferentes</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non quam tristique, volutpat mauris nec, posuere nulla. Curabitur sed urna sed mauris faucibus interdum. Vivamus.</p>
-                <a target="_blank" href="https://github.com/conteudoGeneration" alt="Github da Generation Brasil">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quod error veniam in voluptatem magni quisquam
+                </p>
+
+                <a target="_blank" href="https://github.com/pamelalmeidaa" alt="Github da Pamela Almeida">
                     Explorar
                 </a>
+
             </article>
+
 
             <article id="home_imagem">
-                <img src="./assets/img/astronauta.svg" alt="Capacete de astronauta animado" width="350" height="350">
+                <img src="./assets/img/astronauta.svg" alt="Capacete de Astronauta Animado" width="450">
             </article>
+
         </section>
-    </main>
 
-    <section id="about">
- 
-        <!-- Foto do Perfil do Github -->
-<img src="assets/img/user_01.svg" alt="Foto do Perfil do Github" width="450px">
+        <!-- Seção Sobre você -->
+        <section id="about">
 
-        <!-- Texto Sobre você -->
-<article id="sobre_texto">
+            <!-- Foto do Perfil do Github -->
+            <img src="assets/img/user_01.svg" alt="Foto do Perfil do Github" width="450px">
 
-            <h1>Sobre mim</h1>
+            <!-- Texto Sobre você -->
+            <article id="sobre_texto">
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Quibusdam odit voluptates incidunt inventore rem error harum
-                blanditiis accusamus vitae, minus fugit consequatur?
-                Dolorum maiores magni deleniti modi sit laudantium totam!
-</p>
+                <h1>Sobre mim</h1>
 
-            <!-- Informações do Github -->
-<div id="sobre_github">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quibusdam odit voluptates incidunt inventore rem error harum
+                    blanditiis accusamus vitae, minus fugit consequatur?
+                    Dolorum maiores magni deleniti modi sit laudantium totam!
+                </p>
 
-                <a target="_blank" href="https://github.com/conteudoGeneration">Github</a>
-<p>200 Seguidores</p>
-<p>100 Repositórios</p>
+                <!-- Informações do Github -->
+                <div id="sobre_github">
 
-            </div>
+                    <a target="_blank" href="https://github.com/conteudoGeneration">Github</a>
+                    <p>200 Seguidores</p>
+                    <p>100 Repositórios</p>
 
-        </article>
+                </div>
+
+            </article>
+
+        </section>
 
         <section id="contact">
 
@@ -90,7 +112,6 @@
 
                 <div id="icones_redes_sociais">
                     <a href="">
-                        <img src="" alt="" width="">:
                         <img src="assets/img/linkedin.svg" alt="LinkedIn" />
                     </a>
                     <a href="">
@@ -102,42 +123,39 @@
                 </div>
 
             </article>
+
+            <!-- Seção do Formulário-->
             <form action="" method="POST">
 
-
                 <label for="name">Nome: </label>
-                <input id="name" type="text" name="name" placeholder="Digite seu nome">
+                <input id="name" type="text" name="name" placeholder="Digite seu nome" >
                 <span id="txtNome"></span>
 
                 <label for="email">E-mail: </label>
-                <input id="email" type="text" name="email" placeholder="Digite seu email">
+                <input id="email" type="text" name="email" placeholder="Digite seu email" >
                 <span id="txtEmail"></span>
-
+                
                 <label for="subject">Assunto: </label>
-                <input id="subject" type="text" name="subject" placeholder="Digite o título da message">
+                <input id="subject" type="text" name="subject" placeholder="Digite o título da message" >
                 <span id="txtSubject"></span>
 
                 <label for="message">Mensagem: </label>
-                <textarea id="message" name="message" placeholder="Digite sua message"></textarea>
+                <textarea id="message" name="message" placeholder="Digite sua message" ></textarea>
 
-                <button type="submit">Enviar</button>
+                <button type="submit">Enviar</button> 
+                
+
             </form>
+
         </section>
-    
-        <label for="message">Mensagem:</label> <!--rotula o campo-->
-        <textarea id="message" name="message" placeholder="Envie sua mensagem"></textarea>
 
-        <button type="submit">Enviar</button>
-    </form>
-</section>
-</main>
-<footer>
-<p>Feito com ❤️ por Generation Brasil - 2024</p> <!--   &#10084 -->
-</footer>
-</body>
+    </main>
 
-</html> 
-
+  
+    <footer>
+        Feito com 🧡 por Pamela Almeida - 2024
+    </footer>
 
 </body>
+
 </html>
