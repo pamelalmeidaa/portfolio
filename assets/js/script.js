@@ -1,25 +1,24 @@
-﻿const sobre = document.querySelector("#about");
-
-const formulario = document.querySelector('#formulario');
-
+﻿const sobre = document.querySelector("#about")
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const formulario = document.querySelector("#formulario");
 
-async function getApiGithub() {
-  try {
-    const dadosPerfil = await fetch(`https://api.github.com/users/pamelalmeidaa`);
-    const perfil = await dadosPerfil.json();
+async function getApiGithub(){
+    try{
+        const dadosPerfil = await fetch(`https://api.github.com/users/Pamelalmeidaa`);
+        const perfil = await dadosPerfil.json();
 
-    let conteudo = `
-          <img src="${perfil.avatar_url}"
-          alt="Foto do Perfil do Github - ${perfil.name}">
-  
-          <article id="sobre-texto"> <!-- Adicione aqui as CLASSES -->
-          <h1>Quem sou eu?</h1>
-          <p>
+        let conteudo = 
+        `<img src="${perfil.avatar_url}" alt="Foto do Perfil - ${perfil.name} " id="profile-picture">
+        <article id="sobre_texto">
+            <h1 class="texto texto-destaque">Sobre mim</h1>
+            <p class="texto">
+          
+              <p>
               Sou Pamela, uma desenvolvedora Full-Stack apaixonada por transformar ideias em realidade através do código. Com uma formação sólida em Gestão de Tecnologia da Informação e especialização em desenvolvimento web, tenho experiência em diversas tecnologias como JavaScript, React, Node.js e muito mais. Além disso, sou também uma criativa de coração, com habilidades em modelagem e costura, onde trago à vida sonhos costurados à mão. Busco sempre me aperfeiçoar, aplicando as melhores práticas ágeis em meus projetos e colaborando de forma eficaz com equipes multidisciplinares.
-          </p>
-  
-          <div id="sobre_github" class="sobre_github flex"> <!-- Adicione aqui as CLASSES -->
+</p>
+   </p>
+     
+             <div id="sobre_github" class="sobre_github flex"> <!-- Adicione aqui as CLASSES -->
               <a class="botao" target="_blank" href="${perfil.html_url}">Github</a>
               <!-- Adicione aqui as CLASSES -->
               <p>${perfil.followers} Seguidores</p>
@@ -35,8 +34,8 @@ async function getApiGithub() {
   }
 }
 
-formulario.addEventListener('submit', function (event) {
-
+formulario.addEventListener('submit', function(event) {
+  
   event.preventDefault();
 
   const campoNome = document.querySelector('#name');
@@ -46,7 +45,7 @@ formulario.addEventListener('submit', function (event) {
     txtNome.innerHTML = 'O Nome deve ter no minimo 3 caracteres.';
     campoNome.focus();
     return;
-  } else {
+  }else{
     txtNome.innerHTML = '';
   }
 
@@ -57,18 +56,19 @@ formulario.addEventListener('submit', function (event) {
     txtEmail.innerHTML = 'Digite um E-mail válido.';
     campoEmail.focus();
     return;
-  } else {
+  }else{
     txtEmail.innerHTML = '';
   }
 
   const campoSubject = document.querySelector('#subject');
   const txtSubject = document.querySelector('#txtSubject');
 
+  
   if (campoSubject.value.length < 5) {
     txtSubject.innerHTML = 'O Assunto deve ter no minimo 5 caracteres.';
     campoSubject.focus();
     return;
-  } else {
+  }else{
     txtSubject.innerHTML = '';
   }
 

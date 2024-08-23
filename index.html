@@ -1,38 +1,34 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="pt-br">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Projeto Portfólio">
-    <meta name="author" content="Generation Brasil">
+    <meta name="author" content="Pamela Almeida">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <link rel="icon" href="./assets/img/favicon.svg" />
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Universe</title>
 </head>
-
 <body>
- 
-    <header>
+    <header class="menu_container flex">
+        <div id="header_content" class="menu_content">
 
-  
-        <div id="header_content">
+                <div id="titulo">
 
-
-            <div id="titulo">
-
-                <!-- Hyperlink -->
+                
                 <a href="#">Universe</a>
 
             </div>
 
-        
-            <div id="menu">
+            
+            <div id="menu" class="flex">
 
-                
+            
                 <nav>
                   
-                    <ul>
+                    <ul class="flex menu_lista">
                         <li><a href="#">Home</a></li>
                         <li><a href="#about">Sobre</a></li>
                         <li><a href="#contact">Contate-me</a></li>
@@ -40,106 +36,98 @@
                 </nav>
 
             </div>
-        </div>
 
+        </div>
     </header>
 
     <main>
 
-        <section id="home">
+        <!-- Seção Home -->
+        <section id="home" class="home_container">
 
-       
-            <article id="home_texto">
+            <!-- Texto da Seção Home -->
+            <article id="home_texto" class="home_content">
 
                 <h4>Bem-vindo ao Novo Universo</h4>
                 <h1>Mundos diferentes para pessoas diferentes</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quod error veniam in voluptatem magni quisquam
+                    Explore uma variedade de projetos e ideias que refletem minha paixão por design, tecnologia e criatividade. Neste espaço, você encontrará uma amostra do meu trabalho e das minhas habilidades, desde projetos de design gráfico até desenvolvimentos em tecnologia. Sinta-se à vontade para navegar e descobrir como posso contribuir para seus projetos e objetivos.
+                </p>
                 </p>
 
-                <a target="_blank" href="https://github.com/pamelalmeidaa" alt="Github da Pamela Almeida">
+                <a 
+                    class="botao"
+                    target="_blank" 
+                    href="https://github.com/pamelalmeidaa" 
+                >
                     Explorar
                 </a>
 
             </article>
 
-
-            <article id="home_imagem">
-                <img src="./assets/img/astronauta.svg" alt="Capacete de Astronauta Animado" width="450">
+            <!-- Imagem da Seção Home -->
+            <article id="home_imagem" class="home_content">
+                <img 
+                    class="home_content_img" 
+                    src="./assets/img/astronauta.svg" 
+                    alt="Capacete de Astronauta Animado"  
+                >
             </article>
 
         </section>
 
-        <section id="about">
-
-            <img src="assets/img/user_01.svg" alt="Foto do Perfil do Github" width="450px">
-
-            <article id="sobre_texto">
-
-                <h1>Sobre mim</h1>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quibusdam odit voluptates incidunt inventore rem error harum
-                    blanditiis accusamus vitae, minus fugit consequatur?
-                    Dolorum maiores magni deleniti modi sit laudantium totam!
-                </p>
-
-                <div id="sobre_github">
-
-                    <a target="_blank" href="https://github.com/conteudoGeneration">Github</a>
-                    <p>200 Seguidores</p>
-                    <p>100 Repositórios</p>
-
-                </div>
-
-            </article>
+        <!-- Seção About -->
+        <section id="about" class="sobre_container">
 
         </section>
 
-        <section id="contact">
+        <!-- Seção Contact -->
+        <section id="contact" class="contato_container">
 
-            <article id="redes_sociais">
+            <!-- Seção de Contato - Redes Sociais-->
+            <article id="redes_sociais" class="contato_content">
 
                 <h4>Contate-me</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quod error veniam in voluptatem magni quisquam</p>
+                <p>Interessado(a) em uma colaboração ou parceria? Adoraria ouvir suas ideias! Envie-me uma mensagem e vamos conversar.</p>
 
-                <div id="icones_redes_sociais">
+                <div id="icones_redes_sociais" class="flex social_container">
                     <a href="">
-                        <img src="assets/img/linkedin.svg" alt="LinkedIn" />
+                        <img class="social_icon" src="assets/img/linkedin.svg" alt="LinkedIn" />
                     </a>
                     <a href="">
-                        <img src="assets/img/github.svg" alt="Github" />
+                        <img class="social_icon" src="assets/img/github.svg" alt="Github" />
                     </a>
                     <a href="">
-                        <img src="assets/img/instagram.svg" alt="Instagram" />
+                        <img class="social_icon" src="assets/img/instagram.svg" alt="Instagram" />
                     </a>
                 </div>
 
             </article>
 
-            <!-- Seção do Formulário-->
-            <form action="" method="POST">
 
-                <label for="name">Nome: </label>
+              <form id="formulario" action="https://formsubmit.co/240dde5b305f9e9d07970fc453633e27" method="POST">
+
+                <input type="hidden" name="_next" value="http://localhost:5500/sucess.html">
+
+                <input type="hidden" name="_captcha" value="false">
+
+                <label for="nome">Nome: </label>
                 <input id="name" type="text" name="name" placeholder="Digite seu nome" >
                 <span id="txtNome"></span>
 
-                <label for="email">E-mail: </label>
+                <label for="email">Email: </label>
                 <input id="email" type="text" name="email" placeholder="Digite seu email" >
                 <span id="txtEmail"></span>
-                
+
                 <label for="subject">Assunto: </label>
-                <input id="subject" type="text" name="subject" placeholder="Digite o título da message" >
+                <input id="subject" type="text" name="subject" placeholder="Digite o título da mensagem" >
                 <span id="txtSubject"></span>
 
                 <label for="message">Mensagem: </label>
-                <textarea id="message" name="message" placeholder="Digite sua message" ></textarea>
+                <textarea id="message" name="message" placeholder="Digite sua mensagem" ></textarea>
+                <span id="txtMensagem"></span>
 
-                <button type="submit">Enviar</button> 
-                
+                <button class="botao" type="submit">Enviar</button>
 
             </form>
 
@@ -147,10 +135,12 @@
 
     </main>
 
-  
-    <footer>
+    
+    <footer class="flex">
         Feito com 🧡 por Pamela Almeida - 2024
     </footer>
+
+    <script src="assets/js/script.js"></script>
 
 </body>
 
